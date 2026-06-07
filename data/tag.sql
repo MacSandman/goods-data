@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 8.0.25, for Linux (x86_64)
+--
+-- Host: 30.46.164.116    Database: goods-love
+-- ------------------------------------------------------
+-- Server version	8.0.22-txsql
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tag`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tag` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `name` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '标签名称',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='标签表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tag`
+--
+
+/*!40000 ALTER TABLE `tag` DISABLE KEYS */;
+INSERT INTO `tag` VALUES (1,'文具','2025-09-19 15:40:50'),(2,'精品百货','2025-09-19 15:41:22'),(3,'毛绒玩具','2025-09-19 15:41:52'),(4,'潮玩','2025-09-19 15:42:08'),(5,'桌游','2025-09-19 15:58:49'),(6,'密室逃脱','2025-09-19 15:58:49'),(7,'剧本杀','2025-09-19 15:58:49'),(8,'书店','2025-09-21 10:37:30'),(9,'服装','2025-09-26 14:32:27'),(10,'高达','2025-09-27 10:22:16'),(11,'卡牌','2025-09-27 10:23:24'),(12,'精品店','2025-09-29 16:08:59'),(13,'包','2025-10-01 12:00:11'),(14,'假发','2025-10-01 12:00:11'),(15,'DIY','2025-10-01 16:48:15'),(16,'3D打印','2025-10-01 16:48:15'),(17,'KPOP','2025-11-29 16:06:28'),(18,'游戏王','2026-03-14 17:05:07'),(19,'杂食系','2026-03-14 17:05:07'),(20,'文创','2026-04-18 15:48:48'),(21,'拼豆','2026-04-18 15:48:48');
+/*!40000 ALTER TABLE `tag` ENABLE KEYS */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-06-07 11:18:14
+
+
+
